@@ -2,11 +2,22 @@
 body {
   font-family: 'Lato', sans-serif;
   color: #040000;
+  margin: 0px;
+  padding: 0px;
+}
+
+#preloader{
+  background: white url(../images/Untitled-2\ \(3\).png) no-repeat center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background-size: 15%;
 }
 
 .layout_padding {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .layout_padding2 {
@@ -79,7 +90,7 @@ a:focus {
 /*header section*/
 .hero_area {
   position: relative;
-  background-color: #d1e3ff;
+
 }
 
 .header_section .container-fluid {
@@ -137,12 +148,14 @@ a:focus {
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
   padding: 10px 25px;
-  color: #000000;
+  color: white;
   text-align: center;
 }
 
-.custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
-  color: #0355cc;
+.custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-link {
+ color: black;
+ font-size: large;
+ text-shadow: 2px 2px #ff8a1d;
 }
 
 .custom_nav-container .form-inline .nav_search-btn {
@@ -437,9 +450,6 @@ a:focus {
   width: 100%;
 }
 
-.professional_section {
-  background-color: #d1e3ff;
-}
 
 .professional_section .row {
   -webkit-box-align: center;
@@ -452,9 +462,7 @@ a:focus {
 }
 
 .professional_section .detail-box h2 {
-  text-transform: uppercase;
   font-weight: bold;
-  color: #0355cc;
 }
 
 .professional_section .detail-box p {
@@ -657,11 +665,9 @@ a:focus {
   width: 100%;
   border: none;
   height: 50px;
-  margin-bottom: 25px;
+  margin-bottom: 2%;
   padding-left: 25px;
   background-color: #ffffff;
-  outline: none;
-  color: #ffffff;
   -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
 }
@@ -690,10 +696,8 @@ a:focus {
   border: none;
   display: inline-block;
   font-family: 'Merriweather Sans', sans-serif;
-  text-transform: uppercase;
   padding: 10px 55px;
-  background-color: #0355cc;
-  border: 1px solid #0355cc;
+  background-color: red;
   border-radius: 0;
   color: #ffffff;
   margin-top: 15px;
@@ -701,7 +705,7 @@ a:focus {
 
 .contact_section button:hover {
   background-color: transparent;
-  color: #0355cc;
+  color: black;
 }
 
 .contact_section .map_container {
@@ -714,7 +718,7 @@ a:focus {
 
 .info_section {
   padding: 75px 0;
-  background-color: #0a0f43;
+  background-color: purple;
   text-align: center;
   color: #fff;
 }

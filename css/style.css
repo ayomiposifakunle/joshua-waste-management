@@ -152,6 +152,7 @@ a:focus {
   padding: 10px 25px;
   color: white;
   text-align: center;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-link {

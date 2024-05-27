@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather+Sans:wght@400;700&display=swap");
+
 body {
   font-family: 'Lato', sans-serif;
   color: #040000;
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 #preloader{
@@ -155,7 +157,7 @@ a:focus {
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-link {
  color: black;
  font-size: large;
- text-shadow: 2px 2px #ff8a1d;
+
 }
 
 .custom_nav-container .form-inline .nav_search-btn {
@@ -305,7 +307,8 @@ a:focus {
 }
 
 .slider_section .detail-box {
-  padding-bottom: 90px;
+  padding-bottom: 35%;
+  padding-top: 35%;
 }
 
 .slider_section .detail-box h1 {
@@ -544,7 +547,7 @@ a:focus {
 }
 
 .service_section .box:hover {
-  background-color: #ff8a1d;
+  background-color:red;
   color: #ffffff;
 }
 
@@ -568,15 +571,13 @@ a:focus {
   font-family: 'Merriweather Sans', sans-serif;
   text-transform: uppercase;
   padding: 10px 45px;
-  background-color: #0355cc;
-  border: 1px solid #0355cc;
   border-radius: 0;
   color: #ffffff;
 }
 
 .service_section .btn-box a:hover {
   background-color: transparent;
-  color: #0355cc;
+  color: black;
 }
 
 .client_section .heading_container {
@@ -665,7 +666,7 @@ a:focus {
   width: 100%;
   border: none;
   height: 50px;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   padding-left: 25px;
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
@@ -717,7 +718,6 @@ a:focus {
 }
 
 .info_section {
-  padding: 75px 0;
   background-color: purple;
   text-align: center;
   color: #fff;
@@ -740,7 +740,6 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 25px;
 }
 
 .info_section .social-box .box {
@@ -824,10 +823,6 @@ a:focus {
 }
 
 /* footer section*/
-.footer_section {
-  background-color: #0a0f43;
-}
-
 .footer_section p {
   margin: 0;
   padding: 25px 0;

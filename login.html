@@ -79,18 +79,12 @@ if(!empty($_POST["name"]) && !empty($_POST["email"] && !empty($_POST["password"]
 	  </head>
 
 <body>
-	<!-- <div class="container-xxl bg-white p-0">
-		<div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-  <div class="spinner-border text-danger" style="width: 3rem; height: 3rem;" role="status">
-	  <span class="sr-only">Loading...</span>
-	</div> -->
-
 	<div id="preloader">
 
 	</div>
 	
  <!-- contact section -->
- <section class="contact_section layout_padding">
+ <section class="contact_section layout_padding" style="margin-top: 4%;">
     <div class="container">
       <div class="heading_container">
 		<a href="./index.html"><span class="material-symbols-outlined" style="color: red;">
@@ -116,9 +110,8 @@ if(!empty($_POST["name"]) && !empty($_POST["email"] && !empty($_POST["password"]
     </div>
   </section>
   <!-- end contact section -->
-  <iframe width="560" height="315" style="display: none;" src="https://www.youtube.com/embed/c-X9Zt6Sil0?si=IiahSuuf72xTaSkv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
+  
+  <!-- <iframe style="display: none;" width="560" height="315" src="https://www.youtube.com/embed/AlMypzN-s38?si=SKOJ8B2xfM3y36X2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
 
 	  <script src="js/jquery-3.4.1.min.js"></script>
 	  <script src="js/bootstrap.js"></script>
@@ -132,5 +125,15 @@ if(!empty($_POST["name"]) && !empty($_POST["email"] && !empty($_POST["password"]
 		loader.style.display = "none";
 	})
 </script>
+
+<!-- <script>
+setTimeout(function() {
+	var loader = document.getElementById("preloader");
+	window.addEventListener("load", function(){
+		loader.style.display = "block";
+	})
+}, 1000);
+</script> -->
+
 </body>
 </html>

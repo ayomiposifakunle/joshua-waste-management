@@ -8,8 +8,8 @@ include 'config/database.php';
 
 <?php
 if(isset($_POST["login"])){
-	if(!empty($_POST["email"] && !empty($_POST["password"]))){
-		$email = trim($_POST["email"]);
+	if(!empty($_POST["matricnumber"] && !empty($_POST["password"]))){
+		$email = trim($_POST["matricnumber"]);
 		$password = trim($_POST["password"]);
 	
 		$login = "SELECT * FROM users WHERE email='$email'";
@@ -17,11 +17,11 @@ if(isset($_POST["login"])){
 		if($loginq->num_rows > 0){
 			$userdata = $loginq->fetch_assoc();
 			if(password_verify($password, $userdata["password"])){
-				$_SESSION['userdata'] = $userdata;
+				$_SESSION["userdata"] = $userdata;
 				if($email == 'admin@gmail.com' && $password == 'admin'){
-					header("location: admin/index.php");
+					header("location: admin.php");
 				}else{
-					header("location: account.php");
+					header("location: map.php");
 				}		
 			} else{
 				echo 'incorrect password';
@@ -32,20 +32,6 @@ if(isset($_POST["login"])){
 	} else {
 		echo 'please fill in all login fields';
 	}
-}
-
-if(isset($_POST["signup"])){
-if(!empty($_POST["name"]) && !empty($_POST["email"] && !empty($_POST["password"]))){
-	$name = trim($_POST["name"]);
-	$email = trim($_POST["email"]);
-	$password = trim($_POST["password"]);
-	$hashedpassword = password_hash($password, PASSWORD_DEFAULT);
-	
-	$insert = "INSERT INTO users(name, email, password) VALUES('$name', '$email', '$hashedpassword')";
-	$insertq = $conn->query($insert);
-} else {
-	echo 'please fill in all fields';
-}
 }
 ?> -->
 
@@ -79,10 +65,44 @@ if(!empty($_POST["name"]) && !empty($_POST["email"] && !empty($_POST["password"]
 	  </head>
 
 <body>
-	<div id="preloader">
+	<div id="preloader"></div>
 
-	</div>
-	
+
+	 <!-- navbar -->
+	 <div class="container-fluid bg-danger" style="position:fixed; top: 0px; z-index: 1; color: white;">
+		<nav class="navbar navbar-expand-lg custom_nav-container" style="display: flex; justify-content: space-between;">
+		  <a class="navbar-brand" href="index.html">
+			<span>
+			 <img src="./images/Group 48096175.png" alt="" style="width: 70px; ">
+			</span>
+		  </a>
+	  
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class=""> </span>
+		  </button>
+	  
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav" style="margin: 0 auto;">
+			  <li class="nav-item active m-1">
+				<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+			  </li>
+			  <li class="nav-item m-1">
+				<a class="nav-link" href="map.html"> Map</a>
+			  </li>
+			  <li class="nav-item m-1">
+				<a class="nav-link" href="contact.html">Report/Feedback</a>
+			  </li>
+			</ul>
+		  </div>
+	  
+		  <a class="nav-link" href="login.html" style="color: white;"><span class="material-symbols-outlined">
+		   person
+		   </span></a>
+		</nav>
+	  </div>
+	  <!-- end of navbar -->
+	  
+
  <!-- contact section -->
  <section class="contact_section layout_padding" style="margin-top: 4%;">
     <div class="container">
@@ -95,10 +115,10 @@ if(!empty($_POST["name"]) && !empty($_POST["email"] && !empty($_POST["password"]
       </div>
       <div class="container-fluid">
           <form action="" method="post">
-              <input type="text" placeholder="Enter your matric number" />
+              <input type="text" placeholder="Enter your matric number" name="matricnumber" />
             </div>
             <div>
-              <input type="password" placeholder="Enter your password" />
+              <input type="password" placeholder="Enter your password" name="password" />
             </div>
             <div class="d-flex ">
               <button style="background-color: rgb(240, 42, 42); width: max-content; border-radius: 15px; margin: 0 auto; color: black; font-weight: heavy;">
@@ -111,8 +131,6 @@ if(!empty($_POST["name"]) && !empty($_POST["email"] && !empty($_POST["password"]
   </section>
   <!-- end contact section -->
   
-  <!-- <iframe style="display: none;" width="560" height="315" src="https://www.youtube.com/embed/AlMypzN-s38?si=SKOJ8B2xfM3y36X2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-
 	  <script src="js/jquery-3.4.1.min.js"></script>
 	  <script src="js/bootstrap.js"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
